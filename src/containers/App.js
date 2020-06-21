@@ -13,13 +13,10 @@ const mapStateToProps = state => {
 	}
 }
 
-onSearchChange = (event) => {
-    props.onSearchChange(event.target.value)
-}
 
 const mapDispatchToProps = (dispatch) => {
 	return { 
-		onSearchChange: text => dispatch(setSearchField(text))
+		onSearchChange: (event) => dispatch(setSearchField(event.target.value))
 	}
 }
 
